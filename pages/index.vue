@@ -1,13 +1,20 @@
 <template>
   <div>
-    TEST
+    <UContainer class="p-4">
+      <div>
+        HOMEPAGE
+      </div>
+    </UContainer>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 
 </script>
 
 <style>
-
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
+}
 </style>

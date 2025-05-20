@@ -30,16 +30,18 @@
             <UButton
               color="neutral"
               variant="outline"
+              @click="changeColorMode"
             >
-              <UIcon name="i-lucide-lightbulb" :size="20" class="text-info" @click="changeColorMode"/>
+              <UIcon name="i-lucide-lightbulb" :size="20" class="text-info" />
             </UButton>
           </template>
           <template v-else-if="$colorMode.value === 'dark'">
             <UButton
               color="neutral"
               variant="outline"
+              @click="changeColorMode"
             >
-              <UIcon name="i-lucide-lightbulb-off" :size="20" class="text-warning" @click="changeColorMode"/>
+              <UIcon name="i-lucide-lightbulb-off" :size="20" class="text-warning"/>
             </UButton>
           </template>
           
@@ -63,8 +65,9 @@ function changeColorMode() {
 const items = ref<NavigationMenuItem[]>([
   [
     {
-      label: 'Homepage',
+      label: 'About Me',
       icon: 'i-lucide-house',
+      class: 'text-l text-muted',
       to: '/'
     },
     {
@@ -73,12 +76,19 @@ const items = ref<NavigationMenuItem[]>([
       active: false,
       defaultOpen: false,
       color: 'warning',
+      class: 'text-l text-muted',
       children: [
         {
           label: 'Projects List',
           icon: 'i-lucide-file-text',
           description: 'List of projects available on Github',
           to: '/projects'
+        },
+        {
+          label: 'Professional Experience',
+          icon: 'i-lucide-user-round-pen',
+          description: 'My professional experience described',
+          to: '/experience'
         }
       ]
     }

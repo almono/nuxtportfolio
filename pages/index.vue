@@ -21,7 +21,7 @@
         </template>
 
         <div class="flex items-center">
-          <UIcon name="i-lucide-square-terminal inline" :size="28" class="text-primary"/>
+          <UIcon name="i-lucide-square-terminal" :size="28" class="text-primary"/>
           <p class="text-primary inline text-xl pl-1">Tech Stack Highlights</p>
         </div>
         <div class="flex items-center mt-4">

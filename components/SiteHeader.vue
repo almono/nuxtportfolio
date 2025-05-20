@@ -32,7 +32,7 @@
               variant="outline"
               @click="changeColorMode"
             >
-              <UIcon name="i-lucide-lightbulb" :size="20" class="text-info" />
+              <UIcon name="i-lucide-sun" :size="20" class="text-info" />
             </UButton>
           </template>
           <template v-else-if="$colorMode.value === 'dark'">
@@ -41,7 +41,7 @@
               variant="outline"
               @click="changeColorMode"
             >
-              <UIcon name="i-lucide-lightbulb-off" :size="20" class="text-warning"/>
+              <UIcon name="i-lucide-moon" :size="20" class="text-warning"/>
             </UButton>
           </template>
           

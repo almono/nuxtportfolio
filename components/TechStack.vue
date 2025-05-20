@@ -1,9 +1,9 @@
 <template>
   <div class="mt-2">
     <ul class="list-none list-outside block">
-      <div class="grid grid-cols-3">
+      <div class="grid md:grid-cols-3 sm:grid-cols-1">
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-lucide-file-code-2" :size="18" class="text-info mr-1"/>Languages & Programming Concepts
             </div>
@@ -16,7 +16,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-lucide-library" :size="18" class="text-info mr-1"/>Frameworks & Libraries
             </div>
@@ -27,7 +27,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-material-symbols-api" :size="18" class="text-info mr-1"/>Backend & API Development
             </div>
@@ -41,7 +41,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-material-symbols-view-quilt-outline" :size="18" class="text-info mr-1"/>Frontend Development
             </div>
@@ -52,7 +52,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-material-symbols-tools-wrench-outline-sharp" :size="18" class="text-info mr-1"/>DevOps & Tooling
             </div>
@@ -65,7 +65,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-material-symbols-code-blocks-outline" :size="18" class="text-info mr-1"/>Software Engineering Practices
             </div>
@@ -78,7 +78,7 @@
           </UCard>
         </li>
         <li class="p-1">
-          <UCard class="hover:bg-muted transition-discrete duration-400 h-60">
+          <UCard class="hover:bg-muted hover:ring-2 hover:ring-cyan-500/50 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-200 h-60">
             <div class="flex items-center text-base font-semibold">
               <UIcon name="i-material-symbols-bookmark-manager-outline-rounded" :size="18" class="text-info mr-1"/>CMS & E-Commerce
             </div>

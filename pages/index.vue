@@ -4,8 +4,8 @@
       <UCard variant="outline">
         <template #header>
           <div>
-            <p class="text-3xl">Paweł Walczykiewicz</p>
-            <small class="text-l">Software Developer</small>
+            <p class="text-3xl font-mono">Paweł Walczykiewicz</p>
+            <small class="flex items-center text-md font-mono"><UIcon name="i-lucide-rocket" :size="14" class="text-primary mr-1"/>Full-stack Developer</small>
           </div>
           <div class="border-t-2 mt-3 pt-3 border-primary">
             <p class="text-m leading-7 mb-3">
@@ -52,22 +52,29 @@ import type { AccordionItem } from '@nuxt/ui';
 const items = ref<AccordionItem[]>([
   {
     label: 'Tech Stack Highlights',
-    icon: 'i-lucide-square-terminal text-primary text-3xl',
+    icon: 'i-lucide-square-terminal',
     content: '',
-    trailingIcon: 'i-lucide-arrow-big-down text-primary text-3xl',
-    slot: 'techStack'
+    trailingIcon: 'i-lucide-arrow-big-down',
+    slot: 'techStack',
+    ui: {
+      leadingIcon: 'text-primary text-3xl',
+      trailingIcon: 'text-primary text-3xl transition-all duration-400'
+    }
   },
   {
     label: 'Professional Experience',
-    icon: 'i-material-symbols-deployed-code-account text-primary text-3xl',
+    icon: 'i-material-symbols-deployed-code-account',
     content: '',
-    trailingIcon: 'i-lucide-arrow-big-down text-primary text-3xl',
-    slot: 'experience'
+    trailingIcon: 'i-lucide-arrow-big-down',
+    slot: 'experience',
+    ui: {
+      leadingIcon: 'text-primary text-3xl',
+      trailingIcon: 'text-primary text-3xl transition-all duration-400'
+    }
   }
 ])
 
 </script>
 
 <style>
-
 </style>

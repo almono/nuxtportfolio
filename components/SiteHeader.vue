@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sticky top-0 z-100 backdrop-blur-sm">
     <UContainer class="p-4">
       <UNavigationMenu 
         arrow

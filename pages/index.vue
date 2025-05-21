@@ -20,17 +20,23 @@
           </div>
         </template>
 
-        <div class="flex items-center">
-          <UIcon name="i-lucide-square-terminal" :size="28" class="text-primary"/>
-          <p class="text-primary inline text-xl pl-1">Tech Stack Highlights</p>
-        </div>
-        <div class="flex items-center mt-4">
-          <TechStack />
-        </div>
-        <div class="flex items-center">
-          <UIcon name="i-material-symbols-deployed-code-account" :size="28" class="text-primary"/>
-          <p class="text-primary inline text-xl pl-1">Experience</p>
-        </div>
+        <UAccordion :items="items">
+          <template #default="{ item }">
+            <div class="flex items-center cursor-pointer">
+              <span class="truncate text-primary inline text-xl pl-1">{{ item.label }}</span>
+            </div>
+          </template>
+          <template #techStack-body>
+            <div class="flex items-center mt-4">
+              <TechStack />
+            </div>
+          </template>
+          <template #experience-body>
+            <div class="flex items-center mt-4">
+              <ProfessionalExperience />
+            </div>
+          </template>
+        </UAccordion>
 
         <template #footer>
           
@@ -41,16 +47,24 @@
 </template>
 
 <script lang="ts" setup>
-import type { AccordionItem } from '@nuxt/ui'
+import type { AccordionItem } from '@nuxt/ui';
 
-const items = [
+const items = ref<AccordionItem[]>([
   {
     label: 'Tech Stack Highlights',
-    icon: 'i-lucide-square-terminal',
-    trailingIcon: 'i-lucide-plus',
-    slot: 'techStack' as techStack
+    icon: 'i-lucide-square-terminal text-primary text-3xl',
+    content: '',
+    trailingIcon: 'i-lucide-arrow-big-down text-primary text-3xl',
+    slot: 'techStack'
+  },
+  {
+    label: 'Professional Experience',
+    icon: 'i-material-symbols-deployed-code-account text-primary text-3xl',
+    content: '',
+    trailingIcon: 'i-lucide-arrow-big-down text-primary text-3xl',
+    slot: 'experience'
   }
-] satisfies AccordionItem[]
+])
 
 </script>
 

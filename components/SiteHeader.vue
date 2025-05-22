@@ -95,7 +95,7 @@ const items = ref<NavigationMenuItem[]>([
       to: 'https://www.linkedin.com/in/pwalczykiewicz/',
       target: '_blank',
       variant: 'secondary',
-      slot: 'linked' as linked
+      slot: 'linked' as const
     },
     {
       label: 'Github',
@@ -103,10 +103,10 @@ const items = ref<NavigationMenuItem[]>([
       to: 'https://github.com/almono',
       target: '_blank',
       variant: 'secondary',
-      slot: 'github' as github
+      slot: 'github' as const
     },
     {
-      slot: 'color' as color
+      slot: 'color' as const
     }
   ]
 ])

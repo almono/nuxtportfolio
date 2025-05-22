@@ -12,10 +12,10 @@
               I'm a full-stack software developer with over 8 years of experience specializing in PHP (primarily Laravel), SQL, and frontend technologies like JavaScript and Vue.js. <br>
               I thrive on building scalable, maintainable applications using modern development principles such as SOLID, DRY, KISS, YAGNI and MVC architecture. <br><br>
               At my last work at Corcentric, I've led internal projects using SlimPHP ( PHP7 and later PHP8) and Vue.js ( version 2 later upgraded to 3), contributed to cross-project API communication using project created in Laravel framework, 
-              and implemented third-party integrations including Flywire, Adyen, and OKTA. <br>
+              and implemented third-party integrations including payment providers like Flywire, Adyen, and SSO login OKTA. <br>
               I enjoy mentoring teammates, reviewing code, and finding clean, efficient solutions to complex problems. I believe teamwork is extremely important when it comes to delivering the best quality solutions. <br><br>
               I also have experience working on e-commerce platforms ( mainly custom CMS ), built web applications from scratch, and gained hands-on experience in CMS development and PL/SQL reporting. <br><br>
-              I hold a Master’s degree in Mathematics and Computer Science from the University of Łódź.
+              I hold a Master’s degree in Computer Science from the University of Łódź.
             </p>
           </div>
         </template>

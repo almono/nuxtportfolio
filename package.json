@@ -19,6 +19,7 @@
     "@nuxt/ui": "^3.1.2",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/device": "^3.2.4",
     "@unhead/vue": "^2.0.9",
     "clsx": "^2.1.1",
     "eslint": "^9.27.0",

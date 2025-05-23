@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/ui',
     '@nuxtjs/color-mode',
-    'nuxt-particles'
+    'nuxt-particles',
+    '@nuxtjs/device'
   ],
 
   css: ['./assets/css/main.css'],

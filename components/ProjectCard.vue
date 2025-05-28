@@ -2,7 +2,7 @@
   <UCard class="group hover:ring-2 hover:ring-cyan-200/70 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-400">
     <template #header>
       <div class="font-bold text-xl flex items-center">
-        <ULink :to="card.html_url">
+        <ULink :to="card.homepage ?? card.html_url">
           {{ card.name }}
         </ULink>
         <UBadge v-if="card.language" class="ml-1" color="primary" variant="outline">{{ card.language }}</UBadge>

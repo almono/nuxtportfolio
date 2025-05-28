@@ -1,9 +1,15 @@
 <template>
-  <UCard>
+  <UCard class="group hover:ring-2 hover:ring-cyan-200/70 hover:shadow-xl/10 hover:shadow-cyan-500 inset-shadow-sm inset-shadow-cyan-500/30 transition-discrete duration-400">
     <template #header>
-      <div class="h-8 font-weight-600">
-        {{ card.name }}
+      <div class="font-bold text-xl flex items-center">
+        <ULink :to="card.html_url">
+          {{ card.name }}
+        </ULink>
+        <UBadge v-if="card.language" class="ml-1" color="primary" variant="outline">{{ card.language }}</UBadge>
       </div>
+      <span class="w-full text-xs text-cyan-100/40">
+        Created on {{ getTime(card.created_at) }}
+      </span>
     </template>
 
     <div class="h-24 overflow-auto">
@@ -37,9 +43,17 @@
 
 <script lang="ts" setup>
 defineProps({
-  'card': Object,
-  default: {}
+  'card': {
+    type: Object,
+    default: function() { return {} },
+    required: false
+  }
 })
+
+function getTime(val) 
+{
+  return new Date(val).toLocaleDateString()
+}
 
 </script>
 

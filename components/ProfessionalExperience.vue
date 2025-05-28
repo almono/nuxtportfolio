@@ -53,7 +53,7 @@
         <div class="w-full text-sm">
           <ul class="list-disc list-inside leading-6">
             <li>Maintained online shop applications using Laravel and Javascript/JQuery</li>
-            <li>Created web applications based on provided templates usingbootstrap</li>
+            <li>Created web applications based on provided templates using bootstrap</li>
             <li>Within 1 year created 2 web applications for clients from scratch ( online shop and pharmacy )</li>
           </ul>          
         </div>
@@ -157,7 +157,7 @@
           <ul class="list-disc list-inside leading-6">
             <li>Customer support with polish and english language</li>
             <li>Retrieving and formatting data inside database to create reports required by clients</li>
-            <li>Creating procedures and functions in PL/SQL to generate reportsbased on client's needs</li>
+            <li>Creating procedures and functions in PL/SQL to generate reports based on client's needs</li>
           </ul>          
         </div>
       </div>

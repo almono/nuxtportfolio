@@ -117,6 +117,12 @@ const items = ref<NavigationMenuItem[]>([
           icon: 'i-lucide-file-text',
           description: 'List of projects available on Github',
           to: '/projects'
+        },
+        {
+          label: 'Pokedex API',
+          icon: 'i-ic-twotone-catching-pokemon',
+          description: 'Example API based on a popular Pokemon game',
+          to: '/pokedex'
         }
       ]
     }

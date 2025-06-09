@@ -10,7 +10,7 @@
       </div>
     </div>
     <USeparator class="px-3" />
-    <div class="grid grid-cols-4" v-if="pokemons?.results && Object.keys(pokemons).length > 0">
+    <div class="grid grid-cols-2 md:grid-cols-4" v-if="pokemons?.results && Object.keys(pokemons).length > 0">
       <div v-for="poke in pokemons.results" :key="poke['name']">
         <UCard 
           variant="outline" 
@@ -18,6 +18,7 @@
           :ui="{
             body: 'p-0 sm:p-0'
           }"
+          @click="showPokeDetails(poke['name'])"
         >
           <template #header>
             <div class="text-lg font-bold capitalize group-hover:text-green-300/80">
@@ -28,7 +29,7 @@
             <img lazy class="h-36" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/` + getNumberBeforeLastSlash(poke['url']) + `.png`" />
           </template>
           <template #footer>
-            <Placeholder class="h-8" />
+            <UButton size="md" class="cursor-pointer" @click="showPokeDetails(poke['name'])">View Details</UButton>
           </template>
         </UCard>
       </div>
@@ -37,8 +38,10 @@
 </template>
 
 <script lang="ts" setup>
+import { LazyPokedexPokeDetails } from '#components';
 import { useExtractNumber } from '#imports';
 
+const overlay = useOverlay()
 const { getNumberBeforeLastSlash } = useExtractNumber()
 const pokemonName = ref('')
 const pokemons = ref({
@@ -46,6 +49,13 @@ const pokemons = ref({
   count: 0,
   previous: null,
   next: null
+})
+
+const modal = overlay.create(LazyPokedexPokeDetails, {
+  props: {
+    pokeName: pokemonName.value,
+    pokeInfo: {}
+  }
 })
 
 pokemons.value = await $fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=0`, {
@@ -79,6 +89,22 @@ function getNextPokePage() {
       pokemons.value = response
     }) 
   }
+}
+
+async function showPokeDetails(name) {
+
+  await $fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`, {
+    method: 'GET'
+  }).then(response => {
+
+    modal.patch({
+      pokeName: name,
+      pokeInfo: response
+    })
+
+    modal.open()
+  })
+  
 }
 
 </script>

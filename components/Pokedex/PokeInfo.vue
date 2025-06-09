@@ -3,8 +3,8 @@
     <USeparator class="px-3" />
     <div class="w-full text-xl text-primary my-4 px-3">
       <UInput icon="i-lucide-search" color="primary" highlight v-model="pokemonName" placeholder="Pokemon name..." />
-      <UButton size="md" class="ml-2 cursor-pointer" @click="searchPokemon">Search</UButton>
-      <div class="float-right flex items-center">
+      <UButton size="md" class="sm:ml-0 md:ml-2 cursor-pointer" @click="searchPokemon">Search</UButton>
+      <div class="w-full float-right flex items-center justify-end mt-2">
         <UIcon name="i-ic-baseline-keyboard-double-arrow-left" class="cursor-pointer" @click="getPreviousPokePage" :size="36" />
         <UIcon name="i-ic-baseline-keyboard-double-arrow-right" class="cursor-pointer" @click="getNextPokePage" :size="36" />
       </div>
@@ -21,7 +21,7 @@
           @click="showPokeDetails(poke['name'])"
         >
           <template #header>
-            <div class="text-lg font-bold capitalize group-hover:text-green-300/80">
+            <div class="text-md md:text-lg text-ellipsis sm:text-clip whitespace-nowrap font-bold capitalize group-hover:text-green-300/80">
               #{{ getNumberBeforeLastSlash(poke['url']) }} {{ poke['name'] }}
             </div>
           </template>

@@ -123,6 +123,12 @@ const items = ref<NavigationMenuItem[]>([
           icon: 'i-ic-twotone-catching-pokemon',
           description: 'Example API based on a popular Pokemon game',
           to: '/pokedex'
+        },
+        {
+          label: 'Digimon API',
+          icon: 'i-fa6-solid-spaghetti-monster-flying',
+          description: 'Example API based on a popular Digimon series',
+          to: '/digimons'
         }
       ]
     }
